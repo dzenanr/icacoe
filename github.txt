@@ -29,7 +29,7 @@ Create a New Repo at GitHub
 (without README, since cloning will not be used).
 Repository Name: icacoe
 Description: 
-  Learning about canvas in Dart.
+  Learning about model, view, libraries, packages and pub in Dart through Tic-Tac-Toe game.
       
 Next steps:
   cd git/dart/game/icacoe
