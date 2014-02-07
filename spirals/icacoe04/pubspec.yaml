@@ -1,0 +1,12 @@
+name: icacoe
+version: 0.0.4
+author: Dzenan Ridjanovic <dzenanr@gmail.com>
+description: Tic-Tac-Toe game in Dart wuth the boarding library.
+homepage: https://github.com/dzenanr/icacoe
+environment:
+  sdk: '>=1.1.0+8 <2.0.0'
+documentation: http://goo.gl/g3XThQ
+dependencies:
+  boarding:
+    git: git://github.com/dzenanr/boarding.git
+  browser: any
