@@ -1,0 +1,4 @@
+name: icacoe
+description: Tic-Tac-Toe game in Dart
+dependencies:
+  browser: any
