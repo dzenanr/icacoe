@@ -1,0 +1,35 @@
++ brute force approach:
+
+  Cell neighborCell() {
+    var r;
+    var c;
+    Cell cell;
+
+    r = row + 1;
+    c = column;
+    if (r < grid.height) {
+      cell = grid.cell(r, c);
+      if (cell.text == null) return cell;
+    }
+
+    r = row - 1;
+    c = column;
+    if (r >= 0) {
+      cell = grid.cell(r, c);
+      if (cell.text == null) return cell;
+    }
+
+    r = row;
+    c = column + 1;
+    if (c < grid.width) {
+      cell = grid.cell(r, c);
+      if (cell.text == null) return cell;
+    }
+
+    r = row;
+    c = column - 1;
+    if (c >= 0) {
+      cell = grid.cell(r, c);
+      if (cell.text == null) return cell;
+    }
+  }
