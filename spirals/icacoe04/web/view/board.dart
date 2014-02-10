@@ -1,4 +1,7 @@
-part of icacoe;
+import 'dart:html';
+import 'package:boarding/boarding_model.dart';
+import 'package:boarding/boarding.dart';
+import 'package:icacoe/icacoe.dart';
 
 class Board extends Surface {
   static const String X_COLOR = 'blue';

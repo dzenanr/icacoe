@@ -1,7 +1,5 @@
 library icacoe;
 
-import 'dart:html';
-import 'package:boarding/boarding.dart';
+import 'package:boarding/boarding_model.dart';
 
-part 'app/model/square_grid.dart';
-part 'app/view/board.dart';
+part 'model/square_grid.dart';
