@@ -10,7 +10,8 @@ main() {
   assert(cell12.row == 1 && cell12.column == 2);
   for (Cell c in grid.cells) assert(c.text == null);
   // view
-  new Surface(querySelector('#canvas')).draw();
+  var canvas = querySelector('#canvas');
+  new Surface(canvas).draw();
 }
 
 
