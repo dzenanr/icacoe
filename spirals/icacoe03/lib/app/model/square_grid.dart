@@ -54,6 +54,6 @@ class SquareGrid extends Grid {
   }
 
   bool _completed(List line) =>
-      line.every((t) => t != null && t == X) ||
-      line.every((t) => t != null && t == O);
+    line.every((t) => t != null && t == X) ||
+    line.every((t) => t != null && t == O);
 }

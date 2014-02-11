@@ -15,16 +15,15 @@ class Cell {
         return true;
       }
       return false;
-    } else throw new Exception(
-        'cell out of grid - row: $row, column: $column');
+    }
   }
 }
 
 class Cells {
-  List<Cell> _list;
+  List _list;
 
   Cells() {
-    _list = new List<Cell>();
+    _list = new List();
   }
 
   add(Cell cell) {
@@ -32,6 +31,4 @@ class Cells {
   }
 
   Iterator get iterator => _list.iterator;
-
-  bool every(bool f(Cell cell)) => _list.every(f);
 }

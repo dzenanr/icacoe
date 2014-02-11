@@ -26,8 +26,3 @@ class Rectangle {
   }
 }
 
-class Square extends Rectangle {
-  num length;
-
-  Square(surface, x, y, l) : length = l, super(surface, x, y, l, l);
-}
