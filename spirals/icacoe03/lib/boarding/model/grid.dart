@@ -4,7 +4,7 @@ class Grid {
   int width;  // in columns
   int height; // in rows
 
-  Cells cells = new Cells();
+  var cells = new Cells();
 
   Grid(this.width, this.height) {
     var cell;
@@ -25,5 +25,6 @@ class Grid {
       }
     } else throw new Exception(
         'cell out of grid - row: $row, column: $column');
+    return null;
   }
 }

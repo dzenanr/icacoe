@@ -4,7 +4,7 @@ class Grid {
   int width;
   int height;
 
-  Cells cells = new Cells();
+  var cells = new Cells();
 
   Grid(this.width, this.height) {
     var cell;
@@ -24,5 +24,6 @@ class Grid {
         }
       }
     }
+    return null;
   }
 }
