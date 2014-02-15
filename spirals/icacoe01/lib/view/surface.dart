@@ -3,10 +3,9 @@ part of geo;
 class Surface {
   num width, height; // in pixels
 
-  CanvasElement canvas;
   CanvasRenderingContext2D context;
 
-  Surface(this.canvas) {
+  Surface(canvas) {
     context = canvas.getContext("2d");
     width = canvas.width;
     height = canvas.height;

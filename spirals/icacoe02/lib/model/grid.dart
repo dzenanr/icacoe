@@ -1,4 +1,4 @@
-part of region;
+part of plane;
 
 class Grid {
   int width;  // in columns

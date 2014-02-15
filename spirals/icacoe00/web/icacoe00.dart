@@ -7,9 +7,8 @@ init() {
 }
 
 drawRectangle(context, x, y, width, height) {
-  context
-      ..rect(x, y, width, height)
-      ..stroke();
+  context.rect(x, y, width, height);
+  context.stroke();
 }
 
 main() {

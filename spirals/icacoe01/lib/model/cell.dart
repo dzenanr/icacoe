@@ -4,19 +4,7 @@ class Cell {
   int row, column;
   String text;
 
-  Grid grid;
-
-  Cell(this.grid, this.row, this.column);
-
-  bool intersects(num row, num column) {
-    if (0 <= row    && row    < grid.height &&
-        0 <= column && column < grid.width) {
-      if (this.row == row && this.column == column) {
-        return true;
-      }
-      return false;
-    }
-  }
+  Cell(this.row, this.column);
 }
 
 class Cells {

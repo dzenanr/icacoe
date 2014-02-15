@@ -1,4 +1,4 @@
-part of region;
+part of plane;
 
 class Cell {
   int row, column;
@@ -14,9 +14,9 @@ class Cell {
       if (this.row == row && this.column == column) {
         return true;
       }
-      return false;
     } else throw new Exception(
         'cell out of grid - row: $row, column: $column');
+    return false;
   }
 }
 
