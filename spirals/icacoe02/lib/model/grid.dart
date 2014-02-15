@@ -23,8 +23,7 @@ class Grid {
           return cell;
         }
       }
-    } else throw new Exception(
-        'cell out of grid - row: $row, column: $column');
+    }
     return null;
   }
 }
