@@ -8,8 +8,8 @@ class Rectangle {
 
   draw() {
     surface.context
-        ..rect(x, y, width, height)
-        ..stroke();
+      ..rect(x, y, width, height)
+      ..stroke();
   }
 }
 

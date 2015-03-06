@@ -1,6 +1,6 @@
 import 'dart:html';
-import 'package:boarding/boarding_model.dart';
 import 'package:boarding/boarding.dart';
+import 'package:boarding/grids.dart';
 import 'package:icacoe/icacoe.dart';
 
 class Board extends Surface {
@@ -9,9 +9,9 @@ class Board extends Surface {
 
   bool play = true;
 
-  Board(SquareGrid grid, CanvasElement canvas) : super(grid, canvas) {
-    var cellSize = canvas.width / grid.length; // in pixels
-    var lastPlay = SquareGrid.o;
+  Board(CanvasElement canvas, IaoGrid grid) : super(canvas, grid: grid) {
+    var cellSize = canvas.width / grid.size; // in pixels
+    var lastPlay = IaoGrid.o;
 
     for (Cell cell in grid.cells) cell.textSize  = 32;
     LabelElement winnerLabel = querySelector("#winner");
@@ -20,16 +20,16 @@ class Board extends Surface {
       if (play) {
         var row = (e.offset.y ~/ cellSize).toInt();
         var column = (e.offset.x ~/ cellSize).toInt();
-        Cell cell = grid.cell(row, column);
+        Cell cell = grid.cells.cell(row, column);
         if (cell.text == null) {
-          if (lastPlay == SquareGrid.o) {
-            cell.text = SquareGrid.x;
-            lastPlay = SquareGrid.x;
+          if (lastPlay == IaoGrid.o) {
+            cell.text = IaoGrid.x;
+            lastPlay = IaoGrid.x;
             cell.textColor  = xColor;
           }
           else {
-            cell.text = SquareGrid.o;
-            lastPlay = SquareGrid.o;
+            cell.text = IaoGrid.o;
+            lastPlay = IaoGrid.o;
             cell.textColor  = oColor;
           }
           if (winner()) {
@@ -43,7 +43,7 @@ class Board extends Surface {
     window.animationFrame.then(gameLoop);
   }
 
-  bool winner() => (grid as SquareGrid).lineCompleted();
+  bool winner() => (grid as IaoGrid).lineCompleted();
 
   gameLoop(num delta) {
     draw();
