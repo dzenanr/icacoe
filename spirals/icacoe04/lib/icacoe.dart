@@ -1,5 +1,5 @@
 library icacoe;
 
-import 'package:boarding/grids.dart';
+import 'package:boarding/grid.dart';
 
 part 'model/grid.dart';

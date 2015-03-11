@@ -1,6 +1,6 @@
 import 'dart:html';
 import 'package:boarding/boarding.dart';
-import 'package:boarding/grids.dart';
+import 'package:boarding/grid.dart';
 import 'package:icacoe/icacoe.dart';
 
 class Board extends Surface {
